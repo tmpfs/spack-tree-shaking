@@ -16,6 +16,6 @@ lodash.memoize = memoize
 module.exports = lodash;
 exports.memoize = memoize;
 
-// Indirection on `exports` will work
+// NOTE: Indirection on `exports` will work
 //const exporter = exports;
 //exporter.memoize = memoize;
