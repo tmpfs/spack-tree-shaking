@@ -10,5 +10,12 @@ function memoize () {
 
 lodash.memoize = memoize
 
-//module.exports = lodash;
-exports = lodash;
+// Either of these lines cause this module
+// not to be included in the bundle. Member expression
+// on `module` or `exports`.
+module.exports = lodash;
+exports.memoize = memoize;
+
+// Indirection on `exports` will work
+//const exporter = exports;
+//exporter.memoize = memoize;
