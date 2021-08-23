@@ -1,5 +1,3 @@
-import {getEnvironmentType} from './util';
-
-const name = getEnvironmentType();
-
+import {memoize} from './util';
+const name = memoize();
 console.log(name);
